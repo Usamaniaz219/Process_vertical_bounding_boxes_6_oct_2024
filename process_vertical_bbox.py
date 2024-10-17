@@ -7,8 +7,8 @@ import easyocr
 reader = easyocr.Reader(['en'])
 
 # Step 1: Load the original tile and mask image containing tilted bounding boxes
-tile = cv2.imread('tile_3.jpg')  # Update the path as necessary
-mask = cv2.imread('tile_3_vertical_mask.jpg', cv2.IMREAD_GRAYSCALE)  # Update the path as necessary
+tile = cv2.imread('/home/usama/Home_data/vertical_bbox_reterival_4_oct_2024/Data_for_pixel_transformation/tile_0.jpg')  # Update the path as necessary
+mask = cv2.imread('/home/usama/Home_data/vertical_bbox_reterival_4_oct_2024/Data_for_pixel_transformation/tile_0_vertical_mask.jpg', cv2.IMREAD_GRAYSCALE)  # Update the path as necessary
 
 # Create a blank image with the same dimensions as the original tile
 blank_image = np.zeros_like(tile)
@@ -61,6 +61,8 @@ ocr_results = reader.readtext(blank_image_rgb)
 
 # Step 7: Draw the detected bounding boxes and annotate the text on the blank image
 for (bbox, text, prob) in ocr_results:
+    with open("/home/usama/Amberley-Ohio.txt","a") as file:
+        file.write(text + '\n')
     # Extract the bounding box coordinates
     top_left = tuple(map(int, bbox[0]))
     bottom_right = tuple(map(int, bbox[2]))
