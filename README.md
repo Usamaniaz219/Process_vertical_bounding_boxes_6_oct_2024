@@ -1,6 +1,6 @@
 
 
----
+
 
 # **Text Extraction and OCR Processing with EasyOCR and OpenCV**
 
@@ -80,6 +80,4 @@ This project is open-source under the MIT License.
 ## **📩 Contact**
 For any issues or improvements, feel free to open an **Issue** or contribute via a **Pull Request**.
 
----
 
-Let me know if you need modifications! 🚀
