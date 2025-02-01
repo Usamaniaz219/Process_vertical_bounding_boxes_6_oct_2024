@@ -99,6 +99,4 @@ def process_images(directory_path, tile_width=2450, tile_height=2450, overlap=10
             else:
                 print(f"Failed to read {image_path}")
 
-# Example usage
-image_directory = '/home/usama/input_2_oct_2024/'
-process_images(image_directory)
+
